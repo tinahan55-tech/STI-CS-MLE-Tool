@@ -28,3 +28,23 @@ Encoding=utf8 or big5 支援簡中, 繁中, 英文字串
 
 # 全域 DryRun 設定 (true: 模擬不寫入 | false: 正式異動)
 DryRun=true
+
+### 2.3 powershell 執行指令 : 
+.EXAMPLE
+    .\Import-FalconMLExclusions.ps1 -CsvPath .\import-filepath2.csv -ClientId xxx -ClientSecret yyy -DryRun
+
+.EXAMPLE
+    # 測試模式：僅在螢幕顯示，不儲存 CSV
+    .\Get-FalconMLExclusions.ps1 -TestMode
+
+.EXAMPLE
+    # 僅取前 10 筆並匯出至 CSV
+    .\Get-FalconMLExclusions.ps1 -MaxRecords 10
+
+.EXAMPLE
+    # 測試模式：模擬刪除匯出檔的前 5 筆資料 (不實際執行刪除)
+    .\Batch-Delete-FalconMLExclusions.ps1 -InputCsv .\output\Falcon_ML_Exclusions_20260410.csv -MaxRecords 5 -WhatIf
+
+.EXAMPLE
+    # 正式執行：全數刪除 CSV 檔中的記錄
+    .\Batch-Delete-FalconMLExclusions.ps1 -InputCsv  .\output\Falcon_ML_Exclusions_20260410.csv
