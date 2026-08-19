@@ -1,4 +1,5 @@
 # STI-CS-MLE-Tool
+從 CSV 大量匯入 CrowdStrike Falcon 的 Machine Learning Exclusions（ML 放行清單）。
 Import/review/Delet file path list into MLE List by CS API
 Created by a PowerShell script 
 
