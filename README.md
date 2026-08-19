@@ -4,13 +4,14 @@ Import/review/Delet file path list into MLE List by CS API
 Created by a PowerShell script 
 
 ## 1. 簡介與架構說明
-1. Import-FalconMLExclusionsV5.ps1：批次匯入排除規則，支援跨平台（Windows / Linux）路徑自動辨識與多 CID 處理。
+1. Import-FalconMLExclusionsV5.ps1：批次匯入排除規則，支援跨平台（Windows / Linux）路徑自動辨識
 2. Get-FalconMLExclusions.ps1：查詢並導出 Exclusion 詳細清單，保留 API 原始（Raw）字串，支援記錄筆數限制與測試模式。
 3. Batch-Delete-FalconMLExclusions.ps1：精準刪除工具，可直接讀取 `Get-FalconMLExclusions.ps1` 所導出的 CSV 檔案並以 `id` 進行 Chunking 高速刪除。
 
 ## 2. 系統環境準備與設定檔 (config.cfg)
 
 所有腳本皆共用目錄下的 `config.cfg` 設定檔。執行前請確認 API 權限（需具備 **ML Exclusions: Read/Write** 權限）與端點設定正確。
+提示：若匯入filepath CSV 檔名或路徑含有多國語言，請確保儲存 CSV 時選擇 UTF-8 或 UTF-8 with BOM 編碼。
 
 ### 2.2 設定檔範例 (`config.cfg`)
 ```ini
