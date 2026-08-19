@@ -1,5 +1,7 @@
 # STI-CS-MLE-Tool
-Import file path list into MLE List by CS API
+Import/review/Delet file path list into MLE List by CS API
+Created by a PowerShell script 
+
 ## 1. 簡介與架構說明
 1. Import-FalconMLExclusionsV5.ps1：批次匯入排除規則，支援跨平台（Windows / Linux）路徑自動辨識與多 CID 處理。
 2. Get-FalconMLExclusions.ps1：查詢並導出 Exclusion 詳細清單，保留 API 原始（Raw）字串，支援記錄筆數限制與測試模式。
